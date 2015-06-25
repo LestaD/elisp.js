@@ -1,15 +1,15 @@
 ////
 // Emacs Lisp implementation in JavaScript.
-// 
+//
 // Copyright (c) 2009 Sami Samhuri - sami.samhuri@gmail.com
 //
 // Released under the terms of the MIT license.  See the included file
 // LICENSE.
 
-var type = require('elisp/types'),
-    utils = require('elisp/utils'),
-    primitives = require('elisp/primitives'),
-    symtab = require('elisp/symtab');
+var type = require('./types'),
+    utils = require('./utils'),
+    primitives = require('./primitives'),
+    symtab = require('./symtab');
 
 Evaluator = function(exprs) {
     this.expressions = exprs;

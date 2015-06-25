@@ -1,14 +1,14 @@
 ////
 // Emacs Lisp implementation in JavaScript.
-// 
+//
 // Copyright (c) 2009 Sami Samhuri - sami.samhuri@gmail.com
 //
 // Released under the terms of the MIT license.  See the included file
 // LICENSE.
 
-var init = require('elisp/init'),
-    type = require('elisp/types'),
-    utils = require('elisp/utils');
+var init = require('./init'),
+    type = require('./types'),
+    utils = require('./utils');
 
 var PrimitiveVariables = [
     ['t', {
@@ -119,7 +119,7 @@ n counts from zero.  If list is not that long, nil is returned.");
     // Right now a single string in the arg list will cause all the arguments
     // to be converted to strings similar to JavaScript.  These
     // semantics suck and should change, not only for real emacs lisp compatibility.
-    // ... for now it's the only way to catenate strings. 
+    // ... for now it's the only way to catenate strings.
     definePrimitive('+', [/*...*/],
         function() {
     	     var args = utils.shallowCopy(arguments),
@@ -170,7 +170,7 @@ n counts from zero.  If list is not that long, nil is returned.");
     
     definePrimitive('print', ['x'], utils.pp, "print an expression");
 
-    var settings = require('elisp/settings');
+    var settings = require('./settings');
     definePrimitive('hide-prompt', ['yes-or-no'],
         function(bool){ settings.hidePrompt = !bool.isNil(); },
         "Call with T to hide the prompt or nil to show it.");

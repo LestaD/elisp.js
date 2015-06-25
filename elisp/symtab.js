@@ -1,13 +1,13 @@
 ////
 // Emacs Lisp implementation in JavaScript.
-// 
+//
 // Copyright (c) 2009 Sami Samhuri - sami.samhuri@gmail.com
 //
 // Released under the terms of the MIT license.  See the included file
 // LICENSE.
 
-var utils = require('elisp/utils'),
-    type = require('elisp/types');
+var utils = require('./utils'),
+    type = require('./types');
 
 var SymbolTable = function(bindings) {
     this.symbols = [[]];
@@ -40,7 +40,7 @@ SymbolTable.prototype.lookup = function(name) {
 SymbolTable.prototype.define = function(name, value) {
 //    print('###### REAL DEFINE: ' + name + ' = ' + value);
 //    print('           (TYPES): ' + utils.typeOf(name) + ' = ' + utils.typeOf(value));
-    if (value === undefined && utils.typeOf(name) == 'array') {	
+    if (value === undefined && utils.typeOf(name) == 'array') {
 	var bindings = name,
 	    i = 0,
 	    n = bindings.length,

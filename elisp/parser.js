@@ -1,13 +1,13 @@
 ////
 // Emacs Lisp implementation in JavaScript.
-// 
+//
 // Copyright (c) 2009 Sami Samhuri - sami.samhuri@gmail.com
 //
 // Released under the terms of the MIT license.  See the included file
 // LICENSE.
 
-var utils = require('elisp/utils'),
-    type = require('elisp/types');
+var utils = require('./utils'),
+    type = require('./types');
 
 var Parser = function(data) {
     this.data = data || '';
@@ -156,9 +156,9 @@ Parser.prototype.parseRegex = function() {
 //
 //   * Integers of the form 42, +17, -300, 7300. (trailing .), +1. and
 //     -1.
-// 
+//
 //   * Floating point numbers of the form -4.5, 0.0, and +933825.3450133492
-// 
+//
 //   * Exponential notation for floats, e.g. 1.5e2 (150.0) or 420e-1 (42.0)
 //     (There is no trailing . allowed anywhere in exponent notation)
 //
@@ -212,7 +212,7 @@ Parser.prototype.parseIntOrFloat = function() {
     // Value can technically be undefined but the regex prevents it from
     // ever being so.
 
-    return sign == '-' ? -1*value : value;    
+    return sign == '-' ? -1*value : value;
 };
 
 // These regexes matches all the inputs specified above parseNumber.

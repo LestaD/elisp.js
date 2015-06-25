@@ -1,6 +1,6 @@
 ////
 // Emacs Lisp implementation in JavaScript.
-// 
+//
 // Copyright (c) 2009 Sami Samhuri - sami.samhuri@gmail.com
 //
 // Released under the terms of the MIT license.  See the included file
@@ -83,23 +83,23 @@ var pp = function(x, toString) {
 	return(s);
     }
     else if (s.length > 0) {
-	print(s);
+	   console.log(s);
     }
 };
 exports.pp = pp;
 
 var pp_v = function(x) {
-    print('-------- START --------');
-    print('tag: ' + x.tag());
+    console.log('-------- START --------');
+    console.log('tag: ' + x.tag());
 
     if (x.isCons()) {
-        print('car: ' + x.car());
-        print('cdr: ' + x.cdr());	
+        console.log('car: ' + x.car());
+        console.log('cdr: ' + x.cdr());
     }
     else {
-	print('value: ' + x.value());	
+	console.log('value: ' + x.value());
     }
 
-    print('--------  END  --------');
+    console.log('--------  END  --------');
 };
 exports.pp_v = pp_v;

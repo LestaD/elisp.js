@@ -1,3 +1,2 @@
-require.paths.unshift('.');
-var elisp = require('elisp');
+var elisp = require('./elisp.js');
 elisp.repl.repl();
