@@ -1,7 +1,7 @@
 Emacs Lisp implementation in JavaScript.
 
-Copyright (c) 2009-2014 Sami Samhuri - sami.samhuri@gmail.com
-Copyright (c) 2015 - i.am@lestad.net <Sergey Sova>
+Copyright (c) 2009 Sami Samhuri - sami.samhuri@gmail.com
+Copyright (c) 2015 Sergey Sova - i.am@lestad.net
 
 Released under the terms of the MIT license.  See the included file
 LICENSE.
